@@ -6,7 +6,7 @@ from
         select
             p.property_id as property_id,
             p.name as name,
-            avg(rating) as Avg_rating
+            AVG(rating) as Avg_rating
         from
             property p
             left join review r on r.property_id = p.property_id
