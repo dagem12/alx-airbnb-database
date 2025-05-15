@@ -2,7 +2,7 @@
 
 
 -- Before Indexing
-explain analyze 
+EXPLAIN ANALYZE 
 select
 	*
 from
@@ -11,7 +11,7 @@ where
 	user_id = 'u1'
 	and start_date >= '2025-08-10';
 
-    
+
 -- Index for filtering/sorting on booking status
 CREATE INDEX idx_booking_status ON booking(status);
 
@@ -30,7 +30,7 @@ CREATE INDEX idx_payment_date ON payment(payment_date)
 
 
 -- After Indexing
-explain analyze 
+EXPLAIN ANALYZE 
 select
 	*
 from
